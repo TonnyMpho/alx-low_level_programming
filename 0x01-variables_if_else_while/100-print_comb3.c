@@ -15,7 +15,7 @@ int main(void)
 	for (digits_1 = 0; digits_1 < 10; digits_1++)
 	{
 		digits_2 = digits_1++;
-		if (digits_1 < 9 && digits_2 < 10)
+		if (digits_1 < 10 && digits_2 < 10)
 		{
 			putchar(digits_1 + 48);
 			putchar(digits_2 + 48);
