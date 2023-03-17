@@ -7,7 +7,7 @@
  * Numbers must be separated by ,, followed by a space
  * Numbers should be printed in ascending order
  * Using the putcha
- * Return; Always 0 (success)
+ * Return: Always 0 (success)
  */
 int main(void)
 {
@@ -16,7 +16,7 @@ int main(void)
 	for (digits = 0; digits < 10; digits++)
 	{
 		putchar(digits + 48);
-		if (digits < 9)
+		if (digits < 8)
 		{
 			putchar(',');
 			putchar(' ');
