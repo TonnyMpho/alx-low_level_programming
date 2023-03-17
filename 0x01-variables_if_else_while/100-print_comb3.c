@@ -9,17 +9,16 @@
  */
 int main(void)
 {
-	int digits_1;
-	int digits_2;
+	int digits1;
+	int digits2;
 
-	for (digits_1 = 0; digits_1 < 10; digits_1++)
+	for (digits1 = 0; digits1 < 10; digits1++)
 	{
-		digits_2 = digits_1++;
-		putchar(digits_1 + 48);
-		putchar(digits_2 + 48);
+		digits2 = digits1 + 1;
 
-		if (digits_1 < 10 && digits_2 < 10)
+		if (digits1 < 10 && digits2 < 10)
 		{
+			putchar(digits1);
 			putchar(',');
 			putchar(' ');
 		}
