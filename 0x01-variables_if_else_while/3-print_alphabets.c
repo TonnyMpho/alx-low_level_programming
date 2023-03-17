@@ -11,7 +11,7 @@ int main(void)
 	char lowerAlphhabets;
 	char upperAlphabets = 'A';
 
-	for (lowerAlphabets = 'a'; lowerAphabets <= 'z'; lowerAlphabets++)
+	for (lowerAlphabets = 'a'; lowerAlphabets <= 'z'; lowerAlphabets++)
 	{
 		putchar(lowerAlphabets);
 	}
