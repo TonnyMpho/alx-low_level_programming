@@ -17,8 +17,8 @@ int main(void)
 		digits_2 = digits_1++;
 		if (digits_1 < 9 && digits_2 < 10)
 		{
-			putchar(digits_1);
-			putchar(digits_2);
+			putchar(digits_1 + 48);
+			putchar(digits_2 + 48);
 
 			putchar(',');
 			putchar(' ');
