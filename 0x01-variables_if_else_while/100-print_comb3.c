@@ -16,8 +16,8 @@ int main(void)
 	{
 		for (digits2 = 1; digits2 < 10; digits2++)
 		{
-			putchar(digits1 + 48);
-			putchar(digits2 + 48);
+			putchar((digits1 % 10) + 48);
+			putchar((digits2 % 10) + 48);
 
 			if (digits1 < 9 && digits2 < 10)
 			{
