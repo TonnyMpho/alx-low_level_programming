@@ -9,9 +9,8 @@
 int main(void)
 {
 	char reverseAlphabets;
-	reverseAlphabets = 'z';
 
-	for (reverseAlphabets; reverseAlphabets <= 'a'; reverseAlphabets--)
+	for (reverseAlphabets = 'z'; reverseAlphabets <= 'a'; reverseAlphabets--)
 	{
 		putchar(reverseAlphabets);
 	}
