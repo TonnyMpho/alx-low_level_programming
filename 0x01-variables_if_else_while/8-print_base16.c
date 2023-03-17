@@ -8,11 +8,16 @@
  */
 int main(void)
 {
-	int base16;
+	int numbers;
+	char alphabets;
 
-	for (base16 = 0; base16 <= 16; base16++)
+	for (numbers = 0; numbers <= 16; numbers++)
 	{
-		putchar(base16 + 48);
+		putchar(numbers + 48);
+	}
+	for (alphabets = 'a'; alphabets <= 'f'; alphabets++)
+	{
+		putchar(alphabets)
 	}
 	putchar('\n');
 	return (0);

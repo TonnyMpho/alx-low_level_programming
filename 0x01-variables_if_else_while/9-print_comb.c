@@ -16,7 +16,7 @@ int main(void)
 	for (digits = 0; digits < 10; digits++)
 	{
 		putchar(digits + 48);
-		if (digits < 10)
+		if (digits < 9)
 		{
 			putchar(',');
 			putchar(' ');
