@@ -12,9 +12,9 @@ int main(void)
 	int digits1;
 	int digits2;
 
-	for (digits1 = 0; digits1 < 10; digits1++)
+	for (digits1 = 0; digits1 < 9; digits1++)
 	{
-		for (digits2 = 0; digits2 < 10; digits2++)
+		for (digits2 = 1; digits2 < 10; digits2++)
 		{
 			putchar(digits1 + 48);
 			putchar(digits2 + 48);
