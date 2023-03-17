@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-	char alphabet = 'a';
+	char alphabet;
 
-	for (alphabet; alphabet <= 'z'; alphabet++)
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		if (alphabet != 'a' && alphabet != 'e'))
+		if (alphabet != 'a' && alphabet != 'e')
 		{
 			putchar(alphabet);
 		}
