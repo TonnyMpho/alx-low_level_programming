@@ -19,10 +19,10 @@ int main(void)
 	{
 		for (digits2 = 0; digits2 <= 99; digits2++)
 		{
-			putchar(digits1 + 48);
+			putchar((digits1 / 10) + 48);
 			putchar(digits1 + 48);
 			putchar(' ');
-			putchar(digits2 + 48);
+			putchar((digits2 / 10) + 48);
 			putchar(digits2 + 48);
 
 			if (digits1 < 98 && digits2 <=98)
