@@ -18,7 +18,7 @@ int main(void)
 
 	for (digits1 = 0; digits1 <= 98; digits1++)
 	{
-		for (digits2 = 0; digits2 <= 99; digits2++)
+		for (digits2 = digits1 + 1; digits2 <= 99; digits2++)
 		{
 			putchar((digits1 / 10) + 48);
 			putchar((digits1 % 10) + 48);
