@@ -21,7 +21,7 @@ int main(void)
 			{
 				putchar((digits1 % 10) + 48);
 				putchar((digits2 % 10) + 48);
-				putchar(digits3 + 48)
+				putchar(digits3 + 48);
 
 				if (digits1 < 7 && digits2 < 8 && digits3 <= 9)
 				{
