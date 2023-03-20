@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - Function entry point
+ * print_alphabet_x10 - Entry point
  * A function that prints the alphabet,
  * in lowercase
  * Return: Function does not return
@@ -15,7 +15,7 @@ void print_alphabet_x10(void)
 	{
 		for (a = 'a'; a < 'z'; a++)
 		{
-			_puchar('a');
+			_putchar('a');
 		}
 		_putchar('\n');
 		i++;
