@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int islower - Entry point
+ * int _islower - Entry point
  * @c: The number to be checked
  * A finction that checks for lowercase character
  * Return: Always 0
