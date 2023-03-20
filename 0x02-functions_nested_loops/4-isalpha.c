@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - Entry point
+ * @c: The number to be checked
  * a function that checks for alphabetic character.
  * Return: Always 0 or 1
  */
