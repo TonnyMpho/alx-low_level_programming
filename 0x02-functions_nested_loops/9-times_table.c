@@ -11,8 +11,13 @@ void times_table(void)
 
 	while (a <= 9)
 	{
+		_putchar('0');
+
 		for (b = 1; b <= 9; b++)
 		{
+			_putchar(',');
+			_putchar(' ');
+
 			multi = a * b;
 
 			if (multi > 9)
@@ -22,12 +27,6 @@ void times_table(void)
 				_putchar(' ');
 
 			_putchar((multi % 10) + '0');
-
-			if (b < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
 		}
 		_putchar('\n');
 		a++;
