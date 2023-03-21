@@ -2,7 +2,7 @@
 
 /**
  * _abs - Function Entry point
- * @c: number to find the absolute value from
+ * @c: The number to find the absolute value from
  * A function that computes the absolute value of an integer.
  * Retuen: Return absolute value
  */

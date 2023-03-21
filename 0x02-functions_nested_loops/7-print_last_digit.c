@@ -1,8 +1,8 @@
-include "main.h"
+#include "main.h"
 
 /**
  * print_last_digit - Fuction
- * @c: finding the last digit of the c
+ * @c: The variable to use to find the last digit of the c
  * A a function that prints the last digit of a number.
  * Return: the last digit
  */
