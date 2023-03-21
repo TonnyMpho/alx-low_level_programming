@@ -25,7 +25,7 @@ void print_times_table(int n)
 
 				if (multi <= 99)
 					_putchar(' ');
-				
+
 				if (multi <= 9)
 					_putchar(' ');
 
