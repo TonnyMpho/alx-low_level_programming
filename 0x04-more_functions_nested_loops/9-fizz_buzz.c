@@ -32,7 +32,7 @@ int main(void)
 			printf("Buzz ");
 		} else
 		{
-			printf("%d ", i);
+			printf("%i ", i);
 		}
 	}
 	printf("\n");
