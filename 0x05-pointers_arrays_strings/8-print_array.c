@@ -9,7 +9,8 @@
  * @n: number of elements
  *
  * Numbers must be separated by comma, followed by a space
- * The numbers should be displayed in the same order as they are stored in the array
+ * The numbers should be displayed in the same
+ * order as they are stored in the array
  *
  * Return: Void
  */
