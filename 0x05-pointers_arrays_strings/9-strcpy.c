@@ -20,4 +20,5 @@ char *_strcpy(char *dest, char *src)
 		a++;
 	}
 	dest[a + 1] = '\0';
+
 }
