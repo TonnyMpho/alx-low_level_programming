@@ -6,7 +6,7 @@
  * to the buffer pointed to
  *
  * @src: source string
- * @dst: destination string
+ * @dest: destination string
  *
  * Return: Char
  */
@@ -19,7 +19,6 @@ char *_strcpy(char *dest, char *src)
 		dest[a] = src[a];
 		a++;
 	}
-	dest[a + 1] = '\0';
 
 	return (dest);
 }
