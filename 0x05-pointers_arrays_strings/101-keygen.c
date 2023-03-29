@@ -7,8 +7,6 @@
  *
  * Return: 0 success
  */
-
-
 int main(void)
 {
 	int counter, sum, random;
