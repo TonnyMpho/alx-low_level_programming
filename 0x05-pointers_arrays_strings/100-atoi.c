@@ -23,7 +23,6 @@ int  _atoi(char *s)
 			while (s[index] > 47 && s[index] < 58)
 			{
 				result = result * 10 - (s[index++] - 48);
-				break;
 			}
 		}
 	}
