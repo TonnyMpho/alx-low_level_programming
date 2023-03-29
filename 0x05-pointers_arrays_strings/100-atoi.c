@@ -24,6 +24,7 @@ int  _atoi(char *s)
 			{
 				result = result * 10 - (s[index++] - 48);
 			}
+			break;
 		}
 	}
 	return (result *= sign % 2 == 0 ? -1 : 1);
