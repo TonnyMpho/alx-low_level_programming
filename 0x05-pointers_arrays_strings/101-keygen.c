@@ -9,13 +9,8 @@
  */
 int main(void)
 {
-	int counter, sum, random;
-
-	sum = 0;
-	counter = 0;
-	random = 0;
-
-	char password[80];
+	char generated_pass[80];
+	int sum = 0, random = 0, count = 0;
 
 	srand(time(NULL));
 
@@ -23,9 +18,9 @@ int main(void)
 	{
 
 		if (2772 - sum < 48)
-	{
-		sum -= password[--counter];
-	}
+		{
+			sum -= generated_pass[--count];
+		}
 		else if (2772 - sum <= 126)
 		{
 			random = 2772 - sum;
@@ -37,14 +32,14 @@ int main(void)
 
 		if (random)
 		{
-			password[counter++] = random;
+			generated_pass[count++] = random;
 			sum += random;
 		}
 		random = 0;
 	}
 
-	password[counter] = '\0';
-	printf("%s\n", password);
+	generated_pass[count] = '\0';
+	printf("%s\n", generated_pass);
 
 	return 0;
 }
