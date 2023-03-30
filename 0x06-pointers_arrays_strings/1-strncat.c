@@ -9,7 +9,7 @@
  *
  * Return: dest
  */
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int d_size = 0, s_size = 0;
 
