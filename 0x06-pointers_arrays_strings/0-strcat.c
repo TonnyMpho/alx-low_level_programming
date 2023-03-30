@@ -14,7 +14,8 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int d_size = 0, s_size = 0;
+	int d_size = 0;
+	int s_size = 0;
 
 	while (dest[d_size] != '\0')
 		d_size++;
@@ -28,5 +29,5 @@ char *_strcat(char *dest, char *src)
 	}
 
 	dest[d_size] = '\0';
-	return dest;
+	return (dest);
 }
