@@ -20,5 +20,5 @@ char *_strncpy(char *dest, char *src, int n)
 	for (; size < n; size++)
 		dest[size] = '\0';
 
-	return dest;
+	return (dest);
 }
