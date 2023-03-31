@@ -22,7 +22,7 @@ char *leet(char *str)
 	{
 		for (n = 0; n < 10; n++)
 		{
-			if (str[a] = alpha[n])
+			if (str[a] == alpha[n])
 				str[a] = numbers[n];
 
 		}
