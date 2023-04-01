@@ -12,7 +12,9 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, l, m, n;
+	int i;
+	int j;
+	int k, l, m, n;
 
 	for (i = 0; n1[i]; i++)
 	{
@@ -62,6 +64,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[k] = r[l];
 		r[l] = m;
 	}
-
 	return (r);
 }
