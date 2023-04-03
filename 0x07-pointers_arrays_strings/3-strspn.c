@@ -24,8 +24,8 @@ unsigned int _strspn(char *s, char *accept)
 		if (accept[j] == '\0')
 		{
 			length = i;
-			return length;
+			return (length);
 		}
 	}
-	return i;
+	return (i);
 }
