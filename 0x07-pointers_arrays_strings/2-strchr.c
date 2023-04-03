@@ -2,7 +2,8 @@
 #include <stddef.h>
 
 /**
- * _strchr - A function that locates a character in a string
+ * _strchr - A function that locates a character
+ * in a string
  * @s: string to search from
  * @c: character to check for
  *
