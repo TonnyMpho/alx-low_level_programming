@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stddef.h>
 
-
 /**
  * _strstr - function that locates a substring.
  * @haystack: pointer to astring to search from
@@ -31,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 		if (*needle == 0)
-			return (p)
+			return (p);
 	}
 	return NULL;
 }
