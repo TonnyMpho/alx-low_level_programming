@@ -14,7 +14,7 @@ int is_prime_number(int n)
 	if (n <= 1)
 		return (0);
 
-	return is_prime_check(n, 2)
+	return is_prime_check(n, 2);
 }
 
 int is_prime_check(int n, int d)
