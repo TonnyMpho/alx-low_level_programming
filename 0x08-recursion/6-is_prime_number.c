@@ -9,6 +9,8 @@
  * @d: divisor
  * Return - prime or not
  */
+int is_prime_check(int n, int d);
+
 int is_prime_number(int n)
 {
 	if (n <= 1)
