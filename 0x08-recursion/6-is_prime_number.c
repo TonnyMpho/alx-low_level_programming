@@ -5,6 +5,7 @@
  * input integer is a prime number, otherwise return 0
  *
  * @n: number
+ * @d: divider
  * Return: prime or not
  */
 int prime_check(int n, int d);
