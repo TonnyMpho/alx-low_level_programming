@@ -7,7 +7,7 @@
  *
  * @n: number
  * @d: divisor
- * Return - prime or not
+ * Return: prime or not
  */
 int is_prime_check(int n, int d);
 
@@ -27,5 +27,5 @@ int is_prime_check(int n, int d)
 	if ((n % d) == 0)
 		return (0);
 
-	return is_prime_check(n, d + 1);
+	return (is_prime_check(n, d + 1));
 }
