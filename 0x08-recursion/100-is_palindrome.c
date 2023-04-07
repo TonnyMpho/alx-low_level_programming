@@ -9,7 +9,7 @@ int _palindrome_recursive(char *s, int i, int j);
 
 int is_palindrome(char *s)
 {
-	int length;
+	int length = 0;
 
 	while (s[length] != '\0')
 		length++;
