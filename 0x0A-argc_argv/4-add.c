@@ -9,27 +9,28 @@
  * Return: Always 0 Success.
  */
 int main(int argc, char *argv[]) {
-	
+
 	int result = 0;
 	int value;
-	
+
 	if (argc == 1)
 	{
 		printf("0\n");
 	} else
 	{
 		int i;
+
 		for (i = 1; i < argc; i++)
 		{
 			char *num = argv[i];
 			int j = 0;
-			
+
 			while (num[j] != '\0')
 			{
 				if (num[j] < '0' || num[j] > '9')
 				{
 					printf("Error\n");
-					return 1;
+					return (1);
 				}
 				j++;
 			}
