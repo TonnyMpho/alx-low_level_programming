@@ -8,8 +8,8 @@
  *
  * Return: Always 0 Success.
  */
-int main(int argc, char *argv[]) {
-
+int main(int argc, char *argv[])
+{
 	int result = 0;
 	int i, value;
 
@@ -22,6 +22,7 @@ int main(int argc, char *argv[]) {
 		for (i = 1; i < argc; i++)
 		{
 			char *num = argv[i];
+
 			int j = 0;
 
 			while (num[j] != '\0')
@@ -33,9 +34,8 @@ int main(int argc, char *argv[]) {
 				}
 				j++;
 			}
-
 			value = atoi(argv[i]);
-
+			
 			if (value < 0)
 			{
 				printf("Error\n");
