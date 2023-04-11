@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 			}
 
 			value = atoi(argv[i]);
-			
+
 			if (value < 0)
 			{
 				printf("Error\n");
