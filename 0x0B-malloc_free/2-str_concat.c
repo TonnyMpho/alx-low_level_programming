@@ -24,10 +24,12 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 	
-	length_1 = strlen(s1);
-	length_2 = strlen(s2);
+	length_1 = 0;
+	while (s1[length_1] != '\0') length_1++;
+	length_2 = 0;
+	while (s2[length_2] != '\0') length_2++;
 	
-	concat = malloc(len1 + len2 + 1);
+	concat = malloc(length_1 + length_2 + 1);
 	
 	if (concat == NULL)
 		return NULL;
