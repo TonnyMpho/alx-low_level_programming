@@ -1,4 +1,4 @@
-#include "maim.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -16,5 +16,5 @@ void *malloc_checked(unsigned int b)
 	if (ptr == NULL)
 		exit(98);
 
-	return (ptx);
+	return (ptr);
 }
