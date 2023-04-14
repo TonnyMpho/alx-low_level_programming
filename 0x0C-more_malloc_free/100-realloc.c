@@ -8,7 +8,7 @@
  * @size: size of memory in bytes
  * :return: pointer to copied memory
  */
-void _memcpy(char *dest, char *src, int size);
+void *_memcpy(char *dest, char *src, int size);
 /**
  * _realloc - function that reallocates a memory block using malloc and free
  * @ptr: pointer to previously allocated memory
@@ -18,7 +18,7 @@ void _memcpy(char *dest, char *src, int size);
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void new_ptr;
+	void *new_ptr;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -40,9 +40,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	return (new_ptr);
 }
 
-void _memcpy(char *dest, char *src, int size)
+void *_memcpy(char *dest, char *src, int size)
 {
-	while (n--)
+	while (size--)
 		*dest++ = *src++;
 	return (dest);
 }
