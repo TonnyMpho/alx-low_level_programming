@@ -3,4 +3,4 @@
 
 #define SIZE 1024
 
-#endif // _0_OBJECT_LINE_MACRO_H_
+#endif
