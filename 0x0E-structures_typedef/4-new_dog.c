@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -42,7 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	while (owner[b] != '\0')
 	{
-		new_dog_1->ownmer[b] = owner[b];
+		new_dog_1->owner[b] = owner[b];
 		b++;
 	}
 	new_dog_1->owner[b] = '\0';
