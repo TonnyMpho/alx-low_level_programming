@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int (*op_function)(int, int);
 
 	if (argc != 4)
-		exit(90);
+		exit(98);
 
 	op_function = get_op_func(argv[2]);
 	if(op_function == NULL)
