@@ -1,55 +1,60 @@
 #include "3-calc.h"
 
 /**
- * op_add - function that adds two integers
- * @a: first number
- * @b: second number
+ * op_add - Adds two integers
  *
- * Return: Total/Sum
+ * @a: Integer a
+ * @b: Integer b
+ *
+ * Return: The sum of a and b
  */
 int op_add(int a, int b)
 {
-	return (a + b);
+    return (a + b);
 }
 
 /**
- * op_sub - function that subtracts two integers
- * @a: first integer
- * @b: second nteger
+ * op_sub - Subtracts two integers
+ *
+ * @a: Integer a
+ * @b: Integer b
  *
  * Return: The difference of a and b
  */
 int op_sub(int a, int b)
 {
-	return (a - b);
+    return (a - b);
 }
 
 /**
- * op_mul - function that multiplies two integers
- * @a: Integer
- * @b: Integer
+ * op_mul - Multiplies two integers
  *
- * Return: Multiplication of a and b
+ * @a: Integer a
+ * @b: Integer b
+ *
+ * Return: The product of a and b
  */
 int op_mul(int a, int b)
 {
-	return (a * b);
+    return (a * b);
 }
 
 /**
  * op_div - Divides two integers
- * @a: Integer
- * @b: Integer
  *
- * Return: The division of a & b
+ * @a: Integer a
+ * @b: Integer b
+ *
+ * Return: The result of the division of a & b
  */
 int op_div(int a, int b)
 {
-	return (a / b);
+    return (a / b);
 }
 
 /**
  * op_mod - modulus of two integers
+ *
  * @a: first number
  * @b: second number
  *
@@ -57,5 +62,5 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	return (a % b);
+    return (a % b);
 }
