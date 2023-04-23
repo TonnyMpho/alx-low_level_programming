@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *ptr = main;
+	char *ptr = (char *) main;
 	int i = 0, n_bytes;
 
 	if (argc != 2)
