@@ -27,7 +27,10 @@ int main(int argc, char *argv[])
 
 	while (i < n_bytes)
 	{
-		printf("%02x ", ptr[i]);
+		printf("%02x", ptr[i] & 0xff);
+
+		if (i < n_bytes - 1)
+			printf(" ");
 		i++;
 	}
 	printf("\n");
