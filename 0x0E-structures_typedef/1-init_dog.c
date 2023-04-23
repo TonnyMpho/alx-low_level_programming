@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "dog.h"
 
 /**
@@ -11,26 +12,11 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int i = 0, j = 0;
 
-	if (d == NULL)
-		exit (1);
-
-	while (name[i] != '\0')
+	if (d != NULL)
 	{
-		d->name[i] = name[i];
-		i++;
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
-	d->name[i] = '\0';
-	d->name = name;
-
-	d->age = age;
-
-	while (owner[j] != '\0')
-	{
-		d->owner[j] = owner[j];
-		j++;
-	}
-	d->owner[j] = '\0';
-	d->owner = owner;
 }
