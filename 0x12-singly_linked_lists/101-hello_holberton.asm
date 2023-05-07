@@ -1,14 +1,14 @@
 section .data
-	message db "Hello, Holberton", 10, 0
+	format db "Hello, Holberton!\n", 0
 
 section .text
 	global main
 	extern printf
 
 main:
-	push message 
-	call printf ;call printf
-	add rsp, 8 ;resert the stack
+	push format
+	call printf
+	add rsp, 8  ; Restore the stack pointer after the call
 
-	xor eax, eax
+	xor eax, eax  ; Return 0 from the main function
 	ret
