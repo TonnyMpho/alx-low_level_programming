@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 
 	if (buffer == NULL)
 	{
-		return;
 		free(buffer);
+		exit(98);
 	}
 
 	if (argc != 3)
@@ -33,29 +33,29 @@ int main(int argc, char *argv[])
 
 	file_from = open(argv[1], O_RDONLY);
 
-	if (fd_from == -1)
+	if (file_from == -1)
 	{
 		free(buffer);
 		print_error("Error: Can't read from file %s\n", argv[1], 98);
 	}
 
-	int file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
-	if (fd_to == -1)
+	if (file_to == -1)
 	{
-		close(fd_from);
+		close(file_from);
 		free(buffer);
 		print_error("Error: Can't write to file %s\n", argv[2], 99);
 	}
 
-	while ((bytes_read = read(fd_from, buffer, BUF_SIZE)) > 0)
+	while ((bytes_read = read(file_from, buffer, BUF_SIZE)) > 0)
 	{
-		bytes_written = write(fd_to, buffer, bytes_read);
+		bytes_written = write(file_to, buffer, bytes_read);
 
 		if (bytes_written != bytes_read)
 		{
-			close(fd_from);
-			close(fd_to);
+			close(file_from);
+			close(file_to);
 			free(buffer);
 			print_error("Error: Can't write to file %s\n", argv[2], 99);
 		}
@@ -63,21 +63,21 @@ int main(int argc, char *argv[])
 
 	if (bytes_read == -1)
 	{
-		close(fd_from);
-		close(fd_to);
+		close(file_from);
+		close(file_to);
 		free(buffer);
 		print_error("Error: Can't read from file %s\n", argv[1], 98);
 	}
 
-	if (close(fd_from) == -1)
+	if (close(file_from) == -1)
 	{
 		free(buffer);
-		print_error("Error: Can't close fd %d\n", fd_from, 100);
+		print_error("Error: Can't close fd %d\n", argv[1], 100);
 	}
 
-	if (close(fd_to) == -1)
+	if (close(file_to) == -1)
 	{
-		print_error("Error: Can't close fd %d\n", fd_to, 100);
+		print_error("Error: Can't close fd %d\n", argv[2], 100);
 	}
 
 	return 0;
