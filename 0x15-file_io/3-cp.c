@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, bytes_read, bytes_written;
 	char buffer[BUF_SIZE];
-
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -38,7 +37,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-
 	if (bytes_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
