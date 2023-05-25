@@ -8,7 +8,7 @@
 
 /**
  * check_elf - Checks if a file is an ELF file.
- * @e_ident: A pointer to an array.
+ * @eident: A pointer to an array.
  * Return: Void.
  */
 void check_elf(unsigned char *eident)
@@ -210,7 +210,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 /**
  * print_entry - Prints the entry point of an ELF header.
  * @e_entry: The address of the ELF entry point.
- * @e_ident: A pointer to an array containing the ELF class.
+ * @eident: A pointer to an array containing the ELF class.
  */
 void print_entry(unsigned long int e_entry, unsigned char *eident)
 {
@@ -231,38 +231,17 @@ void print_entry(unsigned long int e_entry, unsigned char *eident)
 }
 
 /**
- * close_elf - Closes an ELF file.
- * @elf: The file descriptor of the ELF file.
- *
- * Description: If the file cannot be closed - exit code 98.
- */
-void close_elf(int elf)
-{
-	if (close(elf) == -1)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %d\n", elf);
-		exit(98);
-	}
-}
-
-/**
- * main - Displays the information contained in the
- *        ELF header at the start of an ELF file.
- * @argc: The number of arguments supplied to the program.
+ * main - Entry point
+ * @argc: argument counter
  * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success.
- *
- * Description: If the file is not an ELF File or
- *              the function fails - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
-	int o, r;
+	int o = open(argv[1], O_RDONLY), r;
 
-	o = open(argv[1], O_RDONLY);
 	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
@@ -283,7 +262,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-
 	check_elf(header->e_ident);
 	printf("ELF Header:\n");
 	print_magic(header->e_ident);
@@ -296,6 +274,10 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(o);
+	if (close(o) == -1)
+	{
+		dprintf(STDERROR_FILENO, "Error: can't close fd %d\n", o);
+		exit(99);
+	}
 	return (0);
 }
