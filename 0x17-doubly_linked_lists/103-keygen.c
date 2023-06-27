@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	char *password, *keys;
+	char password[7], *keys;
 	int i = 0;
 
 	keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/";
