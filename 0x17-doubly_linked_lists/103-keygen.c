@@ -14,13 +14,12 @@ int main(void)
 	keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/";
 	srand(time(NULL));
 
-	while (i < 6)
+	while (i < 7)
 	{
 		password[i] = keys[rand() % 64];
 		i++;
 	}
 
-	password[6] = '0';
 	printf("%s\n", password);
 
 	return (0);
