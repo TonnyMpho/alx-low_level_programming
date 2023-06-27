@@ -21,7 +21,7 @@ int main(void)
 	}
 
 	password[6] = '0';
-	printf("%s", password);
+	printf("%s\n", password);
 
-	return (password);
+	return (0);
 }
