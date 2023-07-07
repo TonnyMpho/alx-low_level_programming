@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "hash_node.h"
+#include "hash_tables.h"
 
 /**
  * hash_table_delete - function that deletes a hash table
