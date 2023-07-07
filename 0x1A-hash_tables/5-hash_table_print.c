@@ -12,17 +12,21 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *node;
 	unsigned long int i;
+	int coma = 1;
 
 	if (ht == NULL)
-		return (NULL);
+		printf("{}");
 
-	printf("{\n");
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		node = ht->array[i];
 		while (node != NULL)
 		{
-			printf(" '%s': '%s'\n" node->key, node->value
+			if (coma != 1)
+				printf(", ");
+			printf("'%s': '%s'", node->key, node->value);
+			coma = 0;
 			node = node->next;
 		}
 	}
