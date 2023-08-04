@@ -35,7 +35,7 @@ void print_buffer(char *b, int size)
 			if (i + j < size)
 			{
 				c = b[i + j];
-				if (isprint(c))
+				if (c >= 32 && c <= 126)
 				{
 					_putchar(c);
 				}
