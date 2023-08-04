@@ -37,15 +37,15 @@ void print_buffer(char *b, int size)
 				c = b[i + j];
 				if (isprint(c))
 				{
-					putchar(c);
+					_putchar(c);
 				}
 				else
 				{
-					putchar('.');
+					_putchar('.');
 				}
 			}
 		}
 
-		putchar('\n');
+		_putchar('\n');
 	}
 }
