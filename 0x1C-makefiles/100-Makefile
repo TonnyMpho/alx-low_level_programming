@@ -6,14 +6,14 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) m.h
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	-$(RM) $(NAME) *~ *.swap
+	$(RM) $(NAME) *~ *.swap
 
 oclean:
-	-$(RM) $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
