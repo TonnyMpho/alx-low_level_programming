@@ -7,7 +7,7 @@ RM = rm
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o school
+	$(CC) $(OBJ) -o $(NAME) 
 
 clean:
 	$(RM) $(NAME) *~ *.swap
