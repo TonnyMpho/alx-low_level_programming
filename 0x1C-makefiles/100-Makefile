@@ -10,10 +10,10 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) $(NAME) *~ *.swap
+	-$(RM) $(NAME) *~ *.swap
 
 oclean:
-	$(RM) $(OBJ)
+	-$(RM) $(OBJ)
 
 fclean: clean oclean
 
